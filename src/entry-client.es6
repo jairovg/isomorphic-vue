@@ -1,4 +1,4 @@
 import { createApp } from './app';
 
-var app = createApp();
+let { app } = createApp();
 app.$mount();

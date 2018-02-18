@@ -17,5 +17,5 @@ export function createApp() {
     render: h => h(app)
   });
 
-  return rootInstance;
+  return { app: rootInstance, router };
 };
