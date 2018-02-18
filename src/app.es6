@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import app from './components/app';
-import router from './router';
+import createRouter from './router';
 
 /**
  * Export a factory function for creating fresh app,
@@ -10,6 +10,7 @@ import router from './router';
  * @returns { Vue } new fresh app
  */
 export function createApp() {
+  var router = createRouter();
   var rootInstance = new Vue({
     el: '#app',
     router,

@@ -1,15 +1,26 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import login from './components/login';
 import products from './components/products';
 
 Vue.use(VueRouter);
 
-let routes = [
-  { path: '/', component: products },
-  { path: '/products', component: products },
-  { path: '*', redirect: '/' }
-];
+/**
+ * Factory function for creating new routers
+ * with each request
+ * 
+ * @returns { VueRouter }
+ */
+function createRouter() {
+  var routes = [
+    { path: '/', component: products },
+    { path: '/login', component: login },
+    { path: '/products', component: products },
+    { path: '*', redirect: '/' }
+  ];
+  
+  return new VueRouter({ routes });
+}
 
-let router = new VueRouter({ routes });
 
-export default router;
+export default createRouter;
