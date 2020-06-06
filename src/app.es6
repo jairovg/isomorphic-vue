@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import app from './components/app';
-import createRouter from './router';
+import app from './components/app.vue';
+import createRouter from './router.es6';
 
 /**
  * Export a factory function for creating fresh app,
  * router and store instances
- * 
+ *
  * @export { function }
  * @returns { Vue } new fresh app
  */
