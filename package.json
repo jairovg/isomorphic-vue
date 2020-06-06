@@ -8,7 +8,7 @@
     "predev": "npm run build:browser && npm run build:server",
     "dev": "node server/index.js",
     "dev:debug": "node --inspect --debug-brk server/index.js",
-    "start": "webpack-dev-server --inline --hot"
+    "start": "webpack-dev-server --config setup/webpack.config.client.js --content-base ./src --inline --hot"
   },
   "dependencies": {
     "@babel/register": "^7.10.1",
