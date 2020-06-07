@@ -1,7 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import login from './components/login.vue';
-import products from './components/products.vue';
 
 Vue.use(VueRouter);
 
@@ -13,13 +11,16 @@ Vue.use(VueRouter);
  */
 function createRouter() {
   var routes = [
-    { path: '/', component: products },
-    { path: '/login', component: login },
-    { path: '/products', component: products },
+    { path: '/', component: () => import('./components/products.vue') },
+    { path: '/login', component: () => import('./components/login.vue') },
+    { path: '/products', component: () => import('./components/products.vue') },
     { path: '*', redirect: '/' }
   ];
 
-  return new VueRouter({ routes });
+  return new VueRouter({
+    mode: 'history',
+    routes,
+  });
 }
 
 
