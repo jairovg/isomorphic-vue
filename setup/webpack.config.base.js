@@ -5,7 +5,8 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   output: {
-    path: path.resolve(__dirname, '../build')
+    path: path.resolve(__dirname, '../build'),
+    publicPath: '/dist',
   },
   module: {
     rules: [
