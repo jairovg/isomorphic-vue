@@ -19,6 +19,6 @@ export default context => {
 
         // The Promise should resolve to the app instance so it can be rendered
         resolve(app);
-      });
+      }, reject);
   });
 };

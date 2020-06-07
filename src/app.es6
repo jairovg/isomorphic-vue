@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import app from './components/app.vue';
+import App from './components/app.vue';
 import createRouter from './router.es6';
 
 /**
@@ -14,7 +14,7 @@ export function createApp() {
   var rootInstance = new Vue({
     el: '#app',
     router,
-    render: h => h(app)
+    render: h => h(App)
   });
 
   return { app: rootInstance, router };
